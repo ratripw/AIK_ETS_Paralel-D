@@ -1,5 +1,4 @@
 <!doctype html>
-
 <html lang="id">
 
 <head>
@@ -11,46 +10,32 @@
   content="width=device-width,initial-scale=1"
 >
 
-<title>
-ETS Alat Industri Kimia — Paralel D
-</title>
+<title>ETS Alat Industri Kimia — Paralel D</title>
 
 
 <style>
 
 :root{
-
   --navy:#153452;
-
   --blue:#2f6fa5;
-
   --gold:#b28734;
-
   --ink:#23364b;
-
   --muted:#69798b;
-
   --line:#d8e0e7;
-
   --paper:#fbfaf7;
-
   --bad:#a2443f;
-
   --ok:#24734f;
-
+  --answered:#e7f2eb;
+  --current:#153452;
 }
-
 
 *{
   box-sizing:border-box;
 }
 
-
 html,
 body{
-
   margin:0;
-
   min-height:100%;
 
   font-family:
@@ -58,8 +43,7 @@ body{
     Helvetica,
     sans-serif;
 
-  color:
-    var(--ink);
+  color:var(--ink);
 
   background:
     linear-gradient(
@@ -68,81 +52,46 @@ body{
       #fafafa 220px,
       #f6f7f8
     );
-
 }
-
 
 body.exam{
   user-select:none;
 }
 
-
 .wrap{
-
-  max-width:920px;
-
+  max-width:980px;
   margin:auto;
-
-  padding:
-    28px 18px 48px;
-
+  padding:28px 18px 48px;
 }
 
-
 .card{
-
-  background:
-    var(--paper);
-
-  border:
-    1px solid #ded8cb;
-
-  border-radius:
-    22px;
-
-  padding:
-    30px;
+  background:var(--paper);
+  border:1px solid #ded8cb;
+  border-radius:22px;
+  padding:30px;
 
   box-shadow:
     0 10px 30px
     rgba(30,48,66,.07);
-
 }
 
-
 .eyebrow{
-
   font:
     700 13px Georgia,
     serif;
 
-  letter-spacing:
-    .16em;
-
-  text-transform:
-    uppercase;
-
-  color:
-    var(--gold);
-
+  letter-spacing:.16em;
+  text-transform:uppercase;
+  color:var(--gold);
 }
-
 
 h1,
 h2{
-
-  font-family:
-    Georgia,
-    serif;
-
-  color:
-    var(--navy);
-
+  font-family:Georgia,serif;
+  color:var(--navy);
 }
 
-
 h1{
-
   font-size:
     clamp(
       34px,
@@ -150,695 +99,429 @@ h1{
       52px
     );
 
-  line-height:
-    1.08;
-
-  margin:
-    8px 0 14px;
-
+  line-height:1.08;
+  margin:8px 0 14px;
 }
-
 
 .sub{
-
-  font-size:
-    18px;
-
-  color:
-    var(--muted);
-
-  line-height:
-    1.55;
-
+  font-size:18px;
+  color:var(--muted);
+  line-height:1.55;
 }
-
 
 .rule{
-
-  height:
-    2px;
-
-  background:
-    var(--gold);
-
-  margin:
-    22px 0;
-
+  height:2px;
+  background:var(--gold);
+  margin:22px 0;
 }
-
 
 .grid{
-
   display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
-  gap:
-    12px;
-
+  grid-template-columns:repeat(3,1fr);
+  gap:12px;
 }
-
 
 .box{
-
-  background:
-    #fff;
-
-  border:
-    1px solid var(--line);
-
-  border-radius:
-    12px;
-
-  padding:
-    15px;
-
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:15px;
 }
-
 
 .box b{
-
   display:block;
-
-  color:
-    var(--navy);
-
-  margin-bottom:
-    5px;
-
+  color:var(--navy);
+  margin-bottom:5px;
 }
-
 
 .box span,
 .small{
-
-  font-size:
-    14px;
-
-  color:
-    var(--muted);
-
-  line-height:
-    1.45;
-
+  font-size:14px;
+  color:var(--muted);
+  line-height:1.45;
 }
-
 
 .form{
-
   display:grid;
-
-  grid-template-columns:
-    1fr 1fr;
-
-  gap:
-    12px;
-
-  margin:
-    20px 0;
-
+  grid-template-columns:1fr 1fr;
+  gap:12px;
+  margin:20px 0;
 }
-
 
 label{
-
-  font-size:
-    13px;
-
-  font-weight:
-    700;
-
-  color:
-    var(--navy);
-
+  font-size:13px;
+  font-weight:700;
+  color:var(--navy);
 }
-
 
 input[type=text]{
-
-  width:
-    100%;
-
-  margin-top:
-    7px;
-
-  padding:
-    12px;
-
-  border:
-    1px solid var(--line);
-
-  border-radius:
-    9px;
-
-  font-size:
-    16px;
-
-  background:
-    #fff;
-
+  width:100%;
+  margin-top:7px;
+  padding:12px;
+  border:1px solid var(--line);
+  border-radius:9px;
+  font-size:16px;
+  background:#fff;
 }
-
 
 .check{
-
   display:flex;
-
-  gap:
-    10px;
-
+  gap:10px;
   align-items:flex-start;
-
-  margin:
-    18px 0;
-
-  color:
-    var(--muted);
-
-  line-height:
-    1.45;
-
+  margin:18px 0;
+  color:var(--muted);
+  line-height:1.45;
 }
-
 
 .btn{
-
-  border:
-    1px solid var(--line);
-
-  background:
-    #fff;
-
-  color:
-    var(--navy);
-
-  padding:
-    11px 17px;
-
-  border-radius:
-    10px;
-
-  font-weight:
-    700;
-
-  cursor:
-    pointer;
-
-  font-size:
-    15px;
-
-  min-height:
-    44px;
-
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--navy);
+  padding:11px 17px;
+  border-radius:10px;
+  font-weight:700;
+  cursor:pointer;
+  font-size:15px;
+  min-height:44px;
 }
-
 
 .btn.primary{
-
-  background:
-    var(--navy);
-
-  color:
-    #fff;
-
-  border-color:
-    var(--navy);
-
+  background:var(--navy);
+  color:#fff;
+  border-color:var(--navy);
 }
 
+.btn.submit{
+  background:var(--gold);
+  color:#fff;
+  border-color:var(--gold);
+}
 
 .btn:disabled{
-
-  opacity:
-    .45;
-
-  cursor:
-    not-allowed;
-
+  opacity:.4;
+  cursor:not-allowed;
 }
-
 
 .hidden{
-
-  display:
-    none !important;
-
+  display:none !important;
 }
-
 
 .top{
-
   display:flex;
-
-  justify-content:
-    space-between;
-
-  gap:
-    12px;
-
-  flex-wrap:
-    wrap;
-
-  align-items:
-    center;
-
+  justify-content:space-between;
+  gap:12px;
+  flex-wrap:wrap;
+  align-items:center;
 }
-
 
 .timer{
-
-  font:
-    700 30px Georgia,
-    serif;
-
-  color:
-    var(--navy);
-
+  font:700 30px Georgia,serif;
+  color:var(--navy);
 }
-
 
 .status{
-
-  font-size:
-    14px;
-
-  color:
-    var(--muted);
-
+  font-size:14px;
+  color:var(--muted);
 }
-
 
 .progress{
+  height:8px;
+  background:#edf1f4;
+  border-radius:999px;
+  overflow:hidden;
+  margin:14px 0 18px;
+}
 
-  height:
-    8px;
-
-  background:
-    #edf1f4;
-
-  border-radius:
-    999px;
-
-  overflow:
-    hidden;
-
-  margin:
-    14px 0 22px;
-
+.progress div{
+  height:100%;
+  background:var(--blue);
+  width:0;
+  transition:.2s;
 }
 
 
-.progress div{
+/* ===================================================
+   NAVIGASI SOAL
+=================================================== */
 
-  height:
-    100%;
+.navigator-wrap{
+  margin:18px 0 24px;
+  padding:15px;
+  background:#fff;
+  border:1px solid var(--line);
+  border-radius:14px;
+}
 
-  background:
-    var(--blue);
+.navigator-top{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+  flex-wrap:wrap;
+  margin-bottom:12px;
+}
 
-  width:
-    0;
+.navigator-title{
+  font-size:13px;
+  font-weight:700;
+  color:var(--navy);
+  text-transform:uppercase;
+  letter-spacing:.06em;
+}
 
-  transition:
-    .2s;
+.answer-status{
+  font-size:13px;
+  color:var(--muted);
+}
 
+.question-nav{
+  display:grid;
+  grid-template-columns:repeat(10,1fr);
+  gap:8px;
+}
+
+.qnav{
+  height:38px;
+  border-radius:8px;
+  border:1px solid var(--line);
+  background:#fff;
+  color:var(--navy);
+  font-weight:700;
+  cursor:pointer;
+  transition:.15s;
+}
+
+.qnav:hover{
+  border-color:var(--blue);
+}
+
+.qnav.answered{
+  background:var(--answered);
+  border-color:#9bc2a9;
+  color:var(--ok);
+}
+
+.qnav.current{
+  background:var(--current);
+  border-color:var(--current);
+  color:#fff;
+}
+
+.legend{
+  display:flex;
+  gap:14px;
+  flex-wrap:wrap;
+  margin-top:11px;
+  font-size:12px;
+  color:var(--muted);
+}
+
+.legend-item{
+  display:flex;
+  align-items:center;
+  gap:6px;
+}
+
+.dot{
+  width:12px;
+  height:12px;
+  border-radius:3px;
+  border:1px solid var(--line);
+  background:#fff;
+}
+
+.dot.done{
+  background:var(--answered);
+  border-color:#9bc2a9;
+}
+
+.dot.now{
+  background:var(--navy);
+  border-color:var(--navy);
 }
 
 
 .qmeta{
-
-  font-size:
-    13px;
-
-  font-weight:
-    700;
-
-  letter-spacing:
-    .08em;
-
-  text-transform:
-    uppercase;
-
-  color:
-    var(--muted);
-
+  font-size:13px;
+  font-weight:700;
+  letter-spacing:.08em;
+  text-transform:uppercase;
+  color:var(--muted);
 }
-
 
 .q{
-
-  font:
-    24px/1.45 Georgia,
-    serif;
-
-  color:
-    var(--navy);
-
-  margin:
-    8px 0 18px;
-
+  font:24px/1.45 Georgia,serif;
+  color:var(--navy);
+  margin:8px 0 18px;
 }
-
 
 .opts{
-
-  display:
-    grid;
-
-  gap:
-    10px;
-
+  display:grid;
+  gap:10px;
 }
-
 
 .opt{
-
-  display:
-    flex;
-
-  gap:
-    12px;
-
-  width:
-    100%;
-
-  text-align:
-    left;
-
-  background:
-    #fff;
-
-  border:
-    1px solid var(--line);
-
-  padding:
-    14px 15px;
-
-  border-radius:
-    11px;
-
-  cursor:
-    pointer;
-
-  font-size:
-    16px;
-
-  color:
-    var(--ink);
-
+  display:flex;
+  gap:12px;
+  width:100%;
+  text-align:left;
+  background:#fff;
+  border:1px solid var(--line);
+  padding:14px 15px;
+  border-radius:11px;
+  cursor:pointer;
+  font-size:16px;
+  color:var(--ink);
 }
-
 
 .opt:hover{
-
-  border-color:
-    #9fb4c6;
-
-  background:
-    #fafcfd;
-
+  border-color:#9fb4c6;
+  background:#fafcfd;
 }
-
 
 .opt.sel{
-
-  border-color:
-    var(--navy);
-
-  background:
-    #edf3f8;
-
+  border-color:var(--navy);
+  background:#edf3f8;
 }
-
 
 .letter{
-
-  font-weight:
-    700;
-
-  color:
-    var(--navy);
-
-  min-width:
-    22px;
-
+  font-weight:700;
+  color:var(--navy);
+  min-width:22px;
 }
-
-
-.actions{
-
-  display:flex;
-
-  justify-content:
-    flex-end;
-
-  margin-top:
-    20px;
-
-}
-
 
 textarea{
-
-  width:
-    100%;
-
-  min-height:
-    260px;
-
-  resize:
-    vertical;
-
-  border:
-    1px solid var(--line);
-
-  border-radius:
-    12px;
-
-  padding:
-    14px;
-
-  outline:
-    none;
+  width:100%;
+  min-height:260px;
+  resize:vertical;
+  border:1px solid var(--line);
+  border-radius:12px;
+  padding:14px;
+  outline:none;
 
   font:
     16px/1.55 Arial,
     Helvetica,
     sans-serif;
 
-  color:
-    var(--ink);
-
-  background:
-    #fff;
-
+  color:var(--ink);
+  background:#fff;
 }
-
 
 .wordcount{
-
-  text-align:
-    right;
-
-  font-size:
-    13px;
-
-  color:
-    var(--muted);
-
-  margin-top:
-    7px;
-
+  text-align:right;
+  font-size:13px;
+  color:var(--muted);
+  margin-top:7px;
 }
 
+.actions{
+  display:flex;
+  justify-content:space-between;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:22px;
+}
+
+.actions-right{
+  display:flex;
+  gap:10px;
+}
 
 .overlay{
-
-  position:
-    fixed;
-
-  inset:
-    0;
-
-  background:
-    rgba(10,24,38,.72);
-
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  justify-content:
-    center;
-
-  padding:
-    20px;
-
-  z-index:
-    10;
-
+  position:fixed;
+  inset:0;
+  background:rgba(10,24,38,.72);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:20px;
+  z-index:20;
 }
-
 
 .warn{
-
-  max-width:
-    520px;
-
-  background:
-    #fff;
-
-  border-radius:
-    18px;
-
-  padding:
-    28px;
-
-  text-align:
-    center;
-
+  max-width:540px;
+  background:#fff;
+  border-radius:18px;
+  padding:28px;
+  text-align:center;
 }
-
 
 .result{
-
-  text-align:
-    center;
-
+  text-align:center;
 }
-
 
 .checkmark{
-
-  width:
-    72px;
-
-  height:
-    72px;
-
-  display:
-    flex;
-
-  align-items:
-    center;
-
-  justify-content:
-    center;
-
-  margin:
-    10px auto 20px;
-
-  border-radius:
-    50%;
-
-  background:
-    #eaf4ee;
-
-  color:
-    var(--ok);
-
-  font-size:
-    38px;
-
-  font-weight:
-    bold;
-
+  width:72px;
+  height:72px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  margin:10px auto 20px;
+  border-radius:50%;
+  background:#eaf4ee;
+  color:var(--ok);
+  font-size:38px;
+  font-weight:bold;
 }
-
 
 .badge{
-
-  display:
-    inline-block;
-
-  background:
-    #eef3f8;
-
-  color:
-    var(--navy);
-
-  border-radius:
-    999px;
-
-  padding:
-    7px 10px;
-
-  font-size:
-    13px;
-
-  font-weight:
-    700;
-
-  margin-top:
-    8px;
-
+  display:inline-block;
+  background:#eef3f8;
+  color:var(--navy);
+  border-radius:999px;
+  padding:7px 10px;
+  font-size:13px;
+  font-weight:700;
+  margin-top:8px;
 }
-
 
 .error{
-
-  color:
-    var(--bad);
-
-  font-weight:
-    700;
-
-  line-height:
-    1.5;
-
+  color:var(--bad);
+  font-weight:700;
+  line-height:1.5;
 }
-
 
 .success{
-
-  color:
-    var(--ok);
-
-  font-weight:
-    700;
-
+  color:var(--ok);
+  font-weight:700;
 }
-
 
 .loading{
-
-  opacity:
-    .65;
-
-  pointer-events:
-    none;
-
+  opacity:.65;
+  pointer-events:none;
 }
 
 
-@media(
-  max-width:700px
-){
+@media(max-width:700px){
 
   .grid,
   .form{
-
-    grid-template-columns:
-      1fr;
-
+    grid-template-columns:1fr;
   }
-
 
   .card{
-
-    padding:
-      22px;
-
+    padding:22px;
   }
 
-
   .q{
+    font-size:21px;
+  }
 
-    font-size:
-      21px;
+  .question-nav{
+    grid-template-columns:repeat(5,1fr);
+  }
 
+  .actions{
+    flex-direction:column;
+  }
+
+  .actions-right{
+    width:100%;
+  }
+
+  .actions-right .btn{
+    flex:1;
   }
 
 }
@@ -849,7 +532,6 @@ textarea{
 
 
 <body>
-
 
 <div class="wrap">
 
@@ -863,27 +545,17 @@ textarea{
   id="start"
 >
 
-
 <div class="eyebrow">
-
 EVALUASI TENGAH SEMESTER • PARALEL D
-
 </div>
 
-
 <h1>
-
 Alat Industri Kimia
-
 </h1>
 
-
 <p class="sub">
-
 Solid Handling &amp; Evaporator
-
 </p>
-
 
 <div class="rule"></div>
 
@@ -898,7 +570,7 @@ Solid Handling &amp; Evaporator
 </b>
 
 <span>
-Seluruh soal wajib dikerjakan.
+Seluruh soal tersedia dalam satu sesi.
 </span>
 
 </div>
@@ -911,7 +583,7 @@ Seluruh soal wajib dikerjakan.
 </b>
 
 <span>
-Seluruh soal wajib dikerjakan.
+Jawaban dapat dibuka dan diperbaiki kembali.
 </span>
 
 </div>
@@ -920,11 +592,11 @@ Seluruh soal wajib dikerjakan.
 <div class="box">
 
 <b>
-Urutan Diacak
+45 Menit
 </b>
 
 <span>
-Urutan soal dan pilihan jawaban berbeda untuk setiap peserta.
+Urutan soal dan pilihan jawaban diacak.
 </span>
 
 </div>
@@ -976,9 +648,11 @@ NPM
 
 <span>
 
-Saya memahami bahwa soal dikerjakan satu per satu,
-tidak dapat kembali ke soal sebelumnya,
-dan perpindahan tab akan tercatat.
+Saya memahami bahwa waktu ujian adalah 45 menit,
+jawaban dapat ditinjau kembali melalui navigasi soal,
+perpindahan tab akan tercatat,
+dan ujian akan disubmit otomatis setelah
+3 kali perpindahan tab.
 
 </span>
 
@@ -1022,9 +696,7 @@ Mulai ETS
 <div>
 
 <div class="eyebrow">
-
 ETS • PARALEL D
-
 </div>
 
 
@@ -1043,9 +715,7 @@ ETS • PARALEL D
   id="timer"
   class="timer"
 >
-
-60:00
-
+45:00
 </div>
 
 
@@ -1054,9 +724,7 @@ ETS • PARALEL D
 Perpindahan tab:
 
 <b id="viol">
-
 0
-
 </b>
 
 /3
@@ -1066,15 +734,81 @@ Perpindahan tab:
 
 </div>
 
-
 </div>
 
 
 <div class="progress">
-
 <div id="bar"></div>
+</div>
+
+
+
+<!-- ===================================================
+     NAVIGASI NOMOR SOAL
+=================================================== -->
+
+<div class="navigator-wrap">
+
+
+<div class="navigator-top">
+
+
+<div class="navigator-title">
+Navigasi Soal
+</div>
+
+
+<div
+  id="answerStatus"
+  class="answer-status"
+>
+Terjawab 0 dari 20
+</div>
+
 
 </div>
+
+
+<div
+  id="questionNav"
+  class="question-nav"
+></div>
+
+
+<div class="legend">
+
+
+<div class="legend-item">
+
+<span class="dot now"></span>
+
+Soal aktif
+
+</div>
+
+
+<div class="legend-item">
+
+<span class="dot done"></span>
+
+Sudah dijawab
+
+</div>
+
+
+<div class="legend-item">
+
+<span class="dot"></span>
+
+Belum dijawab
+
+</div>
+
+
+</div>
+
+</div>
+
 
 
 <div
@@ -1090,24 +824,25 @@ Perpindahan tab:
 
 
 
-<div id="mcqArea">
+<!-- PILIHAN GANDA -->
 
+<div id="mcqArea">
 
 <div
   id="opts"
   class="opts"
 ></div>
 
-
 </div>
 
 
+
+<!-- URAIAN -->
 
 <div
   id="essayArea"
   class="hidden"
 >
-
 
 <textarea
   id="essayInput"
@@ -1125,7 +860,6 @@ kata
 
 </div>
 
-
 </div>
 
 
@@ -1135,19 +869,38 @@ kata
 ></p>
 
 
+
 <div class="actions">
 
 
 <button
-  id="next"
-  class="btn primary"
-  disabled
+  id="prevBtn"
+  class="btn"
 >
-
-Soal Berikutnya →
-
+← Sebelumnya
 </button>
 
+
+<div class="actions-right">
+
+
+<button
+  id="nextBtn"
+  class="btn primary"
+>
+Berikutnya →
+</button>
+
+
+<button
+  id="submitBtn"
+  class="btn submit"
+>
+Submit Ujian
+</button>
+
+
+</div>
 
 </div>
 
@@ -1167,30 +920,22 @@ Soal Berikutnya →
 
 
 <div class="checkmark">
-
 ✓
-
 </div>
 
 
 <div class="eyebrow">
-
 SUBMISSION RECEIVED
-
 </div>
 
 
 <h2>
-
 Jawaban Berhasil Dikirim
-
 </h2>
 
 
 <p class="success">
-
 Jawaban Anda telah tersimpan.
-
 </p>
 
 
@@ -1201,9 +946,7 @@ Jawaban Anda telah tersimpan.
 
 
 <p class="small">
-
 Pastikan halaman ini sudah muncul sebelum menutup browser.
-
 </p>
 
 
@@ -1215,7 +958,7 @@ Pastikan halaman ini sudah muncul sebelum menutup browser.
 
 
 <!-- ===================================================
-     TAB SWITCH WARNING
+     TAB WARNING
 =================================================== -->
 
 <div
@@ -1228,9 +971,7 @@ Pastikan halaman ini sudah muncul sebelum menutup browser.
 
 
 <h2>
-
 Perpindahan Tab Terdeteksi
-
 </h2>
 
 
@@ -1241,14 +982,11 @@ Perpindahan Tab Terdeteksi
   id="backBtn"
   class="btn primary"
 >
-
 Kembali ke Ujian
-
 </button>
 
 
 </div>
-
 
 </div>
 
@@ -1261,13 +999,6 @@ Kembali ke Ujian
    SUPABASE CONFIG
 =================================================== */
 
-
-/*
-COPY PROJECT URL DAN PUBLISHABLE KEY
-DARI FILE TRIAL YANG SUDAH BERHASIL.
-*/
-
-
 const SUPABASE_URL =
   "https://ofnfcojkwlojvjiuaivh.supabase.co";
 
@@ -1278,20 +1009,16 @@ const SUPABASE_PUBLISHABLE_KEY =
 
 
 /* ===================================================
-   EXAM CONFIG
+   CONFIG UJIAN
 =================================================== */
-
 
 const CFG = {
 
-  minutes:
-    60,
+  minutes:45,
 
-  maxViol:
-    3
+  maxViol:3
 
 };
-
 
 
 const $ =
@@ -1300,52 +1027,28 @@ const $ =
 
 
 
-let attemptId =
-  null;
+let attemptId = null;
 
+let items = [];
 
-let items =
-  [];
+let idx = 0;
 
+let pgAnswers = {};
 
-let idx =
-  0;
+let essayAnswers = {};
 
-
-let selectedOption =
-  null;
-
-
-let pgAnswers =
-  {};
-
-
-let essayAnswers =
-  {};
-
-
-let violations =
-  0;
-
+let violations = 0;
 
 let secondsLeft =
   CFG.minutes * 60;
 
+let timerInterval = null;
 
-let timerInterval =
-  null;
+let started = false;
 
+let submitted = false;
 
-let started =
-  false;
-
-
-let submitted =
-  false;
-
-
-let pendingWarning =
-  false;
+let pendingWarning = false;
 
 
 
@@ -1353,9 +1056,7 @@ let pendingWarning =
    SHUFFLE
 =================================================== */
 
-
 function shuffle(array){
-
 
   const a =
     [...array];
@@ -1369,7 +1070,6 @@ function shuffle(array){
 
     i--
   ){
-
 
     const j =
       Math.floor(
@@ -1387,7 +1087,6 @@ function shuffle(array){
       a[i]
     ];
 
-
   }
 
 
@@ -1401,9 +1100,7 @@ function shuffle(array){
    CONFIG CHECK
 =================================================== */
 
-
 function readyConfig(){
-
 
   return (
 
@@ -1414,22 +1111,8 @@ function readyConfig(){
 
     &&
 
-    !SUPABASE_URL
-      .includes(
-        "PASTE_"
-      )
-
-    &&
-
     SUPABASE_PUBLISHABLE_KEY
       .length > 20
-
-    &&
-
-    !SUPABASE_PUBLISHABLE_KEY
-      .includes(
-        "PASTE_"
-      )
 
   );
 
@@ -1441,12 +1124,10 @@ function readyConfig(){
    SUPABASE RPC
 =================================================== */
 
-
 async function rpc(
   functionName,
   body
 ){
-
 
   const response =
     await fetch(
@@ -1455,8 +1136,7 @@ async function rpc(
 
       {
 
-        method:
-          "POST",
+        method:"POST",
 
         headers:{
 
@@ -1472,18 +1152,14 @@ async function rpc(
         },
 
         body:
-          JSON.stringify(
-            body
-          )
+          JSON.stringify(body)
 
       }
 
     );
 
 
-
-  let data =
-    null;
+  let data = null;
 
 
   try{
@@ -1495,32 +1171,24 @@ async function rpc(
 
   catch(error){
 
-    data =
-      null;
+    data = null;
 
   }
-
 
 
   if(
     !response.ok
   ){
 
-
     throw new Error(
 
       data?.message
-
       ||
-
       data?.error
-
       ||
-
       `HTTP ${response.status}`
 
     );
-
 
   }
 
@@ -1532,12 +1200,10 @@ async function rpc(
 
 
 /* ===================================================
-   START FORM
+   VALIDASI FORM
 =================================================== */
 
-
 function validateStart(){
-
 
   const name =
     $("name")
@@ -1549,7 +1215,6 @@ function validateStart(){
     $("npm")
       .value
       .trim();
-
 
 
   $("startBtn").disabled =
@@ -1568,7 +1233,6 @@ function validateStart(){
     );
 
 }
-
 
 
 $("name")
@@ -1597,7 +1261,6 @@ $("agree")
    START EXAM
 =================================================== */
 
-
 $("startBtn").onclick =
 async ()=>{
 
@@ -1610,15 +1273,12 @@ async ()=>{
     !readyConfig()
   ){
 
-
     $("startError").textContent =
       "Konfigurasi ujian belum tersedia.";
-
 
     return;
 
   }
-
 
 
   const studentName =
@@ -1631,7 +1291,6 @@ async ()=>{
     $("npm")
       .value
       .trim();
-
 
 
   $("startBtn").disabled =
@@ -1647,7 +1306,6 @@ async ()=>{
     .add(
       "loading"
     );
-
 
 
   try{
@@ -1671,7 +1329,6 @@ async ()=>{
       );
 
 
-
     attemptId =
       data.attempt_id;
 
@@ -1688,14 +1345,11 @@ async ()=>{
 
         question =>({
 
-          type:
-            "mcq",
+          type:"mcq",
 
-          id:
-            question.id,
+          id:question.id,
 
-          topic:
-            question.topic,
+          topic:question.topic,
 
           question:
             question.question,
@@ -1724,14 +1378,11 @@ async ()=>{
 
         essay =>({
 
-          type:
-            "essay",
+          type:"essay",
 
-          id:
-            essay.id,
+          id:essay.id,
 
-          topic:
-            essay.topic,
+          topic:essay.topic,
 
           question:
             essay.question
@@ -1741,13 +1392,11 @@ async ()=>{
       );
 
 
-
     if(
       mcqs.length !== 16
       ||
       essays.length !== 4
     ){
-
 
       throw new Error(
         "Jumlah soal dari database tidak sesuai."
@@ -1758,8 +1407,8 @@ async ()=>{
 
 
     /*
-    Semua 16 PG + 4 uraian
-    kemudian diacak menjadi 20 soal.
+    SEMUA 16 PG + 4 URAIAN
+    DIACAK MENJADI 20 SOAL
     */
 
     items =
@@ -1771,42 +1420,22 @@ async ()=>{
       );
 
 
+    idx = 0;
 
-    idx =
-      0;
+    pgAnswers = {};
 
+    essayAnswers = {};
 
-    selectedOption =
-      null;
-
-
-    pgAnswers =
-      {};
-
-
-    essayAnswers =
-      {};
-
-
-    violations =
-      0;
-
+    violations = 0;
 
     secondsLeft =
       CFG.minutes * 60;
 
+    started = true;
 
-    started =
-      true;
+    submitted = false;
 
-
-    submitted =
-      false;
-
-
-    pendingWarning =
-      false;
-
+    pendingWarning = false;
 
 
     document
@@ -1815,7 +1444,6 @@ async ()=>{
       .add(
         "exam"
       );
-
 
 
     $("start")
@@ -1839,7 +1467,6 @@ async ()=>{
       );
 
 
-
     $("student").textContent =
       studentName
       +
@@ -1848,10 +1475,40 @@ async ()=>{
       studentNpm;
 
 
-
     $("viol").textContent =
       violations;
 
+
+    renderQuestion();
+
+    updateClock();
+
+
+    timerInterval =
+      setInterval(
+
+        ()=>{
+
+          secondsLeft--;
+
+          updateClock();
+
+
+          if(
+            secondsLeft <= 0
+          ){
+
+            finishExam(
+              "Waktu habis — submit otomatis"
+            );
+
+          }
+
+        },
+
+        1000
+
+      );
 
 
     try{
@@ -1864,53 +1521,7 @@ async ()=>{
 
     catch(error){
 
-      /*
-      Fullscreen tidak didukung
-      atau ditolak browser.
-      */
-
     }
-
-
-
-    renderQuestion();
-
-
-    updateClock();
-
-
-
-    timerInterval =
-      setInterval(
-
-        ()=>{
-
-
-          secondsLeft--;
-
-
-          updateClock();
-
-
-
-          if(
-            secondsLeft <= 0
-          ){
-
-
-            finishExam(
-              "Waktu habis — submit otomatis"
-            );
-
-
-          }
-
-
-        },
-
-        1000
-
-      );
 
 
   }
@@ -1938,7 +1549,6 @@ async ()=>{
     $("startBtn").textContent =
       "Mulai ETS";
 
-
   }
 
 };
@@ -1949,11 +1559,9 @@ async ()=>{
    TIMER
 =================================================== */
 
-
 function updateClock(){
 
-
-  const safeTime =
+  const safe =
     Math.max(
       0,
       secondsLeft
@@ -1962,13 +1570,12 @@ function updateClock(){
 
   const minutes =
     Math.floor(
-      safeTime / 60
+      safe / 60
     );
 
 
   const seconds =
-    safeTime % 60;
-
+    safe % 60;
 
 
   $("timer").textContent =
@@ -1992,17 +1599,194 @@ function updateClock(){
       );
 
 
-
   if(
     secondsLeft <= 300
   ){
 
-
     $("timer").style.color =
       "var(--bad)";
 
+  }
+
+}
+
+
+
+/* ===================================================
+   STATUS JAWABAN
+=================================================== */
+
+function isAnswered(item){
+
+  if(
+    item.type ===
+    "mcq"
+  ){
+
+    return !!pgAnswers[
+      item.id
+    ];
 
   }
+
+
+  return !!(
+    essayAnswers[
+      item.id
+    ]
+    &&
+    essayAnswers[
+      item.id
+    ]
+      .trim()
+  );
+
+}
+
+
+
+function answeredCount(){
+
+  return items.filter(
+    item =>
+      isAnswered(item)
+  ).length;
+
+}
+
+
+
+/* ===================================================
+   SIMPAN JAWABAN AKTIF
+=================================================== */
+
+function saveCurrentAnswer(){
+
+  const item =
+    items[idx];
+
+
+  if(
+    !item
+  ){
+
+    return;
+
+  }
+
+
+  if(
+    item.type ===
+    "essay"
+  ){
+
+    essayAnswers[
+      item.id
+    ] =
+      $("essayInput")
+        .value;
+
+  }
+
+}
+
+
+
+/* ===================================================
+   NAVIGATOR
+=================================================== */
+
+function renderNavigator(){
+
+  $("questionNav").innerHTML =
+    "";
+
+
+  items.forEach(
+
+    (
+      item,
+      index
+    )=>{
+
+
+      const button =
+        document
+          .createElement(
+            "button"
+          );
+
+
+      button.type =
+        "button";
+
+
+      button.className =
+        "qnav";
+
+
+      button.textContent =
+        index + 1;
+
+
+      if(
+        isAnswered(item)
+      ){
+
+        button
+          .classList
+          .add(
+            "answered"
+          );
+
+      }
+
+
+      if(
+        index === idx
+      ){
+
+        button
+          .classList
+          .remove(
+            "answered"
+          );
+
+
+        button
+          .classList
+          .add(
+            "current"
+          );
+
+      }
+
+
+      button.onclick =
+      ()=>{
+
+        saveCurrentAnswer();
+
+        idx =
+          index;
+
+        renderQuestion();
+
+      };
+
+
+      $("questionNav")
+        .appendChild(
+          button
+        );
+
+    }
+
+  );
+
+
+  $("answerStatus").textContent =
+    `Terjawab ${answeredCount()} dari ${items.length}`;
 
 }
 
@@ -2012,58 +1796,39 @@ function updateClock(){
    RENDER QUESTION
 =================================================== */
 
-
 function renderQuestion(){
-
-
-  selectedOption =
-    null;
-
-
-  $("next").disabled =
-    true;
-
 
   $("examError").textContent =
     "";
-
 
 
   const item =
     items[idx];
 
 
-
   if(
     !item
   ){
 
-
     $("examError").textContent =
       "Soal tidak ditemukan.";
-
 
     return;
 
   }
 
 
-
   $("qmeta").textContent =
     `Soal ${idx + 1} dari ${items.length} • ${item.topic}`;
-
 
 
   $("qtext").textContent =
     item.question;
 
 
-
   $("bar").style.width =
     (
-      (
-        idx + 1
-      )
+      answeredCount()
       /
       items.length
       *
@@ -2071,7 +1836,6 @@ function renderQuestion(){
     )
     +
     "%";
-
 
 
   if(
@@ -2098,7 +1862,6 @@ function renderQuestion(){
       "";
 
 
-
     item.options
       .forEach(
 
@@ -2123,6 +1886,22 @@ function renderQuestion(){
             "button";
 
 
+          if(
+            pgAnswers[
+              item.id
+            ]
+            ===
+            option
+          ){
+
+            button
+              .classList
+              .add(
+                "sel"
+              );
+
+          }
+
 
           const letter =
             document
@@ -2143,7 +1922,6 @@ function renderQuestion(){
             ".";
 
 
-
           const text =
             document
               .createElement(
@@ -2153,7 +1931,6 @@ function renderQuestion(){
 
           text.textContent =
             option;
-
 
 
           button
@@ -2168,14 +1945,14 @@ function renderQuestion(){
             );
 
 
-
           button.onclick =
           ()=>{
 
 
-            selectedOption =
+            pgAnswers[
+              item.id
+            ] =
               option;
-
 
 
             [
@@ -2194,7 +1971,6 @@ function renderQuestion(){
             );
 
 
-
             button
               .classList
               .add(
@@ -2202,13 +1978,21 @@ function renderQuestion(){
               );
 
 
+            renderNavigator();
 
-            $("next").disabled =
-              false;
 
+            $("bar").style.width =
+              (
+                answeredCount()
+                /
+                items.length
+                *
+                100
+              )
+              +
+              "%";
 
           };
-
 
 
           $("opts")
@@ -2216,11 +2000,9 @@ function renderQuestion(){
               button
             );
 
-
         }
 
       );
-
 
   }
 
@@ -2241,8 +2023,7 @@ function renderQuestion(){
       );
 
 
-
-    const savedAnswer =
+    $("essayInput").value =
       essayAnswers[
         item.id
       ]
@@ -2250,49 +2031,21 @@ function renderQuestion(){
       "";
 
 
-
-    $("essayInput").value =
-      savedAnswer;
-
-
-
     updateWordCount();
 
-
-
-    $("next").disabled =
-      !savedAnswer.trim();
-
-
-
-    $("essayInput")
-      .focus();
-
-
   }
 
 
+  $("prevBtn").disabled =
+    idx === 0;
 
-  if(
+
+  $("nextBtn").disabled =
     idx ===
-    items.length - 1
-  ){
+    items.length - 1;
 
 
-    $("next").textContent =
-      "Submit Jawaban";
-
-
-  }
-
-  else{
-
-
-    $("next").textContent =
-      "Soal Berikutnya →";
-
-
-  }
+  renderNavigator();
 
 }
 
@@ -2302,9 +2055,7 @@ function renderQuestion(){
    WORD COUNT
 =================================================== */
 
-
 function updateWordCount(){
-
 
   const text =
     $("essayInput")
@@ -2312,22 +2063,16 @@ function updateWordCount(){
       .trim();
 
 
-
   const count =
     text
-
     ?
-
     text
       .split(
         /\s+/
       )
       .length
-
     :
-
     0;
-
 
 
   $("wordCount").textContent =
@@ -2359,23 +2104,28 @@ $("essayInput")
       }
 
 
-
       essayAnswers[
         item.id
       ] =
-        $("essayInput").value;
-
+        $("essayInput")
+          .value;
 
 
       updateWordCount();
 
+      renderNavigator();
 
 
-      $("next").disabled =
-        !$("essayInput")
-          .value
-          .trim();
-
+      $("bar").style.width =
+        (
+          answeredCount()
+          /
+          items.length
+          *
+          100
+        )
+        +
+        "%";
 
     }
 
@@ -2384,71 +2134,33 @@ $("essayInput")
 
 
 /* ===================================================
-   NEXT QUESTION
+   PREVIOUS / NEXT
 =================================================== */
 
+$("prevBtn").onclick =
+()=>{
 
-$("next").onclick =
-async ()=>{
-
-
-  const item =
-    items[idx];
-
+  saveCurrentAnswer();
 
 
   if(
-    item.type ===
-    "mcq"
+    idx > 0
   ){
 
+    idx--;
 
-    if(
-      !selectedOption
-    ){
-
-      return;
-
-    }
-
-
-
-    pgAnswers[
-      item.id
-    ] =
-      selectedOption;
-
+    renderQuestion();
 
   }
 
-  else{
-
-
-    const answer =
-      $("essayInput")
-        .value
-        .trim();
+};
 
 
 
-    if(
-      !answer
-    ){
+$("nextBtn").onclick =
+()=>{
 
-      return;
-
-    }
-
-
-
-    essayAnswers[
-      item.id
-    ] =
-      answer;
-
-
-  }
-
+  saveCurrentAnswer();
 
 
   if(
@@ -2456,22 +2168,9 @@ async ()=>{
     items.length - 1
   ){
 
-
     idx++;
 
-
     renderQuestion();
-
-
-  }
-
-  else{
-
-
-    await finishExam(
-      "Disubmit oleh mahasiswa"
-    );
-
 
   }
 
@@ -2480,9 +2179,62 @@ async ()=>{
 
 
 /* ===================================================
-   SUBMIT
+   MANUAL SUBMIT
 =================================================== */
 
+$("submitBtn").onclick =
+async ()=>{
+
+
+  saveCurrentAnswer();
+
+
+  const unanswered =
+    items.length
+    -
+    answeredCount();
+
+
+  let message =
+    "Apakah Anda yakin ingin mengirim seluruh jawaban?";
+
+
+  if(
+    unanswered > 0
+  ){
+
+    message =
+      `Masih ada ${unanswered} soal yang belum dijawab.\n\nTetap submit ujian?`;
+
+  }
+
+
+  const confirmSubmit =
+    window.confirm(
+      message
+    );
+
+
+  if(
+    !confirmSubmit
+  ){
+
+    return;
+
+  }
+
+
+  await finishExam(
+    "Disubmit oleh mahasiswa"
+  );
+
+};
+
+
+
+/* ===================================================
+   SUBMIT EXAM
+=================================================== */
 
 async function finishExam(
   reason
@@ -2498,79 +2250,17 @@ async function finishExam(
   }
 
 
-
-  submitted =
-    true;
+  saveCurrentAnswer();
 
 
-  started =
-    false;
+  submitted = true;
 
+  started = false;
 
 
   clearInterval(
     timerInterval
   );
-
-
-
-  const activeItem =
-    items[idx];
-
-
-
-  /*
-  Simpan jawaban aktif jika submit
-  terjadi otomatis karena waktu/tab.
-  */
-
-
-  if(
-    activeItem?.type ===
-    "mcq"
-    &&
-    selectedOption
-  ){
-
-
-    pgAnswers[
-      activeItem.id
-    ] =
-      selectedOption;
-
-
-  }
-
-
-
-  if(
-    activeItem?.type ===
-    "essay"
-  ){
-
-
-    const text =
-      $("essayInput")
-        .value
-        .trim();
-
-
-    if(
-      text
-    ){
-
-
-      essayAnswers[
-        activeItem.id
-      ] =
-        text;
-
-
-    }
-
-
-  }
-
 
 
   const pgPayload =
@@ -2598,10 +2288,23 @@ async function finishExam(
     );
 
 
-
   const essayPayload =
     Object.entries(
       essayAnswers
+    )
+
+    .filter(
+
+      (
+        [
+          essayId,
+          answerText
+        ]
+      ) =>
+        answerText
+        &&
+        answerText.trim()
+
     )
 
     .map(
@@ -2617,25 +2320,23 @@ async function finishExam(
           essayId,
 
         answer_text:
-          answerText
+          answerText.trim()
 
       })
 
     );
 
 
-
-  $("next").disabled =
+  $("submitBtn").disabled =
     true;
 
 
-  $("next").textContent =
+  $("submitBtn").textContent =
     "Mengirim…";
 
 
   $("examError").textContent =
     "";
-
 
 
   try{
@@ -2668,14 +2369,12 @@ async function finishExam(
       );
 
 
-
     document
       .body
       .classList
       .remove(
         "exam"
       );
-
 
 
     $("overlay")
@@ -2699,34 +2398,22 @@ async function finishExam(
       );
 
 
-
-    /*
-    NILAI TIDAK DITAMPILKAN KE MAHASISWA.
-    Nilai PG tetap tersimpan di database.
-    */
-
-
     $("submissionId").textContent =
       "Submission ID: "
       +
       data.attempt_id;
 
 
-
     try{
-
 
       if(
         document.fullscreenElement
       ){
 
-
         await document
           .exitFullscreen();
 
-
       }
-
 
     }
 
@@ -2740,13 +2427,9 @@ async function finishExam(
   catch(error){
 
 
-    submitted =
-      false;
+    submitted = false;
 
-
-    started =
-      true;
-
+    started = true;
 
 
     $("examError").textContent =
@@ -2754,17 +2437,15 @@ async function finishExam(
       +
       error.message
       +
-      ". Jangan tutup halaman. Silakan tekan Submit lagi.";
+      ". Jangan tutup halaman. Silakan submit kembali.";
 
 
-
-    $("next").disabled =
+    $("submitBtn").disabled =
       false;
 
 
-    $("next").textContent =
-      "Coba Submit Lagi";
-
+    $("submitBtn").textContent =
+      "Submit Ujian";
 
   }
 
@@ -2773,9 +2454,8 @@ async function finishExam(
 
 
 /* ===================================================
-   TAB SWITCH DETECTION
+   TAB SWITCH
 =================================================== */
-
 
 document
   .addEventListener(
@@ -2796,10 +2476,12 @@ document
       }
 
 
-
       if(
         document.hidden
       ){
+
+
+        saveCurrentAnswer();
 
 
         violations++;
@@ -2807,7 +2489,6 @@ document
 
         $("viol").textContent =
           violations;
-
 
 
         if(
@@ -2820,7 +2501,6 @@ document
             "Batas perpindahan tab tercapai — submit otomatis"
           );
 
-
         }
 
         else{
@@ -2829,9 +2509,7 @@ document
           pendingWarning =
             true;
 
-
         }
-
 
       }
 
@@ -2846,10 +2524,8 @@ document
           false;
 
 
-
         $("warnText").textContent =
           `Perpindahan tab ke-${violations} tercatat. Pada perpindahan ke-${CFG.maxViol}, ujian akan disubmit otomatis.`;
-
 
 
         $("overlay")
@@ -2858,9 +2534,7 @@ document
             "hidden"
           );
 
-
       }
-
 
     }
 
@@ -2881,18 +2555,15 @@ $("backBtn").onclick =
 
   try{
 
-
     document
       .documentElement
       .requestFullscreen?.();
-
 
   }
 
   catch(error){
 
   }
-
 
 };
 
@@ -2901,7 +2572,6 @@ $("backBtn").onclick =
 /* ===================================================
    BASIC ANTI COPY
 =================================================== */
-
 
 [
   "contextmenu",
@@ -2929,17 +2599,13 @@ $("backBtn").onclick =
             !submitted
           ){
 
-
             event.preventDefault();
 
-
           }
-
 
         }
 
       );
-
 
   }
 
@@ -2966,11 +2632,9 @@ document
       }
 
 
-
       const key =
         event.key
           .toLowerCase();
-
 
 
       if(
@@ -3013,12 +2677,9 @@ document
 
       ){
 
-
         event.preventDefault();
 
-
       }
-
 
     }
 
@@ -3029,7 +2690,6 @@ document
 /* ===================================================
    CLOSE / RELOAD WARNING
 =================================================== */
-
 
 window
   .addEventListener(
@@ -3045,21 +2705,16 @@ window
         !submitted
       ){
 
-
         event.preventDefault();
-
 
         event.returnValue =
           "";
 
-
       }
-
 
     }
 
   );
-
 
 </script>
 
