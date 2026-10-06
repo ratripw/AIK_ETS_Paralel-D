@@ -1,20 +1,11 @@
 <!doctype html>
 <html lang="id">
-
 <head>
-
 <meta charset="utf-8">
-
-<meta
-  name="viewport"
-  content="width=device-width,initial-scale=1"
->
-
+<meta name="viewport" content="width=device-width,initial-scale=1">
 <title>ETS Alat Industri Kimia — Paralel D</title>
 
-
 <style>
-
 :root{
   --navy:#153452;
   --blue:#2f6fa5;
@@ -26,7 +17,6 @@
   --bad:#a2443f;
   --ok:#24734f;
   --answered:#e7f2eb;
-  --current:#153452;
 }
 
 *{
@@ -37,12 +27,7 @@ html,
 body{
   margin:0;
   min-height:100%;
-
-  font-family:
-    Arial,
-    Helvetica,
-    sans-serif;
-
+  font-family:Arial,Helvetica,sans-serif;
   color:var(--ink);
 
   background:
@@ -65,9 +50,17 @@ body.exam{
 }
 
 .card{
+  position:relative;
+  z-index:2;
+
   background:var(--paper);
-  border:1px solid #ded8cb;
+
+  border:
+    1px solid
+    #ded8cb;
+
   border-radius:22px;
+
   padding:30px;
 
   box-shadow:
@@ -77,18 +70,27 @@ body.exam{
 
 .eyebrow{
   font:
-    700 13px Georgia,
+    700 13px
+    Georgia,
     serif;
 
   letter-spacing:.16em;
-  text-transform:uppercase;
-  color:var(--gold);
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--gold);
 }
 
 h1,
 h2{
-  font-family:Georgia,serif;
-  color:var(--navy);
+  font-family:
+    Georgia,
+    serif;
+
+  color:
+    var(--navy);
 }
 
 h1{
@@ -100,106 +102,177 @@ h1{
     );
 
   line-height:1.08;
-  margin:8px 0 14px;
+
+  margin:
+    8px 0 14px;
 }
 
 .sub{
   font-size:18px;
-  color:var(--muted);
+
+  color:
+    var(--muted);
+
   line-height:1.55;
 }
 
 .rule{
   height:2px;
-  background:var(--gold);
-  margin:22px 0;
+
+  background:
+    var(--gold);
+
+  margin:
+    22px 0;
 }
 
 .grid{
   display:grid;
-  grid-template-columns:repeat(3,1fr);
+
+  grid-template-columns:
+    repeat(
+      3,
+      1fr
+    );
+
   gap:12px;
 }
 
 .box{
   background:#fff;
-  border:1px solid var(--line);
+
+  border:
+    1px solid
+    var(--line);
+
   border-radius:12px;
+
   padding:15px;
 }
 
 .box b{
   display:block;
-  color:var(--navy);
+
+  color:
+    var(--navy);
+
   margin-bottom:5px;
 }
 
 .box span,
 .small{
   font-size:14px;
-  color:var(--muted);
+
+  color:
+    var(--muted);
+
   line-height:1.45;
 }
 
 .form{
   display:grid;
-  grid-template-columns:1fr 1fr;
+
+  grid-template-columns:
+    1fr 1fr;
+
   gap:12px;
-  margin:20px 0;
+
+  margin:
+    20px 0;
 }
 
 label{
   font-size:13px;
+
   font-weight:700;
-  color:var(--navy);
+
+  color:
+    var(--navy);
 }
 
 input[type=text]{
   width:100%;
+
   margin-top:7px;
+
   padding:12px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid
+    var(--line);
+
   border-radius:9px;
+
   font-size:16px;
+
   background:#fff;
 }
 
 .check{
   display:flex;
+
   gap:10px;
+
   align-items:flex-start;
-  margin:18px 0;
-  color:var(--muted);
+
+  margin:
+    18px 0;
+
+  color:
+    var(--muted);
+
   line-height:1.45;
 }
 
 .btn{
-  border:1px solid var(--line);
+  border:
+    1px solid
+    var(--line);
+
   background:#fff;
-  color:var(--navy);
-  padding:11px 17px;
+
+  color:
+    var(--navy);
+
+  padding:
+    11px 17px;
+
   border-radius:10px;
+
   font-weight:700;
+
   cursor:pointer;
+
   font-size:15px;
+
   min-height:44px;
 }
 
 .btn.primary{
-  background:var(--navy);
+  background:
+    var(--navy);
+
   color:#fff;
-  border-color:var(--navy);
+
+  border-color:
+    var(--navy);
 }
 
 .btn.submit{
-  background:var(--gold);
+  background:
+    var(--gold);
+
   color:#fff;
-  border-color:var(--gold);
+
+  border-color:
+    var(--gold);
 }
 
 .btn:disabled{
   opacity:.4;
-  cursor:not-allowed;
+
+  cursor:
+    not-allowed;
 }
 
 .hidden{
@@ -208,242 +281,407 @@ input[type=text]{
 
 .top{
   display:flex;
-  justify-content:space-between;
+
+  justify-content:
+    space-between;
+
   gap:12px;
+
   flex-wrap:wrap;
+
   align-items:center;
 }
 
 .timer{
-  font:700 30px Georgia,serif;
-  color:var(--navy);
+  font:
+    700 30px
+    Georgia,
+    serif;
+
+  color:
+    var(--navy);
 }
 
 .status{
   font-size:14px;
-  color:var(--muted);
+
+  color:
+    var(--muted);
 }
 
 .progress{
   height:8px;
-  background:#edf1f4;
+
+  background:
+    #edf1f4;
+
   border-radius:999px;
+
   overflow:hidden;
-  margin:14px 0 18px;
+
+  margin:
+    14px 0 18px;
 }
 
 .progress div{
   height:100%;
-  background:var(--blue);
+
+  background:
+    var(--blue);
+
   width:0;
+
   transition:.2s;
 }
 
 
-/* ===================================================
+/* =========================================
    NAVIGASI SOAL
-=================================================== */
+========================================= */
 
 .navigator-wrap{
-  margin:18px 0 24px;
+  margin:
+    18px 0 24px;
+
   padding:15px;
+
   background:#fff;
-  border:1px solid var(--line);
+
+  border:
+    1px solid
+    var(--line);
+
   border-radius:14px;
 }
 
 .navigator-top{
   display:flex;
-  justify-content:space-between;
+
+  justify-content:
+    space-between;
+
   align-items:center;
+
   gap:12px;
+
   flex-wrap:wrap;
+
   margin-bottom:12px;
 }
 
 .navigator-title{
   font-size:13px;
+
   font-weight:700;
-  color:var(--navy);
-  text-transform:uppercase;
+
+  color:
+    var(--navy);
+
+  text-transform:
+    uppercase;
+
   letter-spacing:.06em;
 }
 
 .answer-status{
   font-size:13px;
-  color:var(--muted);
+
+  color:
+    var(--muted);
 }
 
 .question-nav{
   display:grid;
-  grid-template-columns:repeat(10,1fr);
+
+  grid-template-columns:
+    repeat(
+      10,
+      1fr
+    );
+
   gap:8px;
 }
 
 .qnav{
   height:38px;
+
   border-radius:8px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid
+    var(--line);
+
   background:#fff;
-  color:var(--navy);
+
+  color:
+    var(--navy);
+
   font-weight:700;
+
   cursor:pointer;
+
   transition:.15s;
 }
 
 .qnav:hover{
-  border-color:var(--blue);
+  border-color:
+    var(--blue);
 }
 
 .qnav.answered{
-  background:var(--answered);
-  border-color:#9bc2a9;
-  color:var(--ok);
+  background:
+    var(--answered);
+
+  border-color:
+    #9bc2a9;
+
+  color:
+    var(--ok);
 }
 
 .qnav.current{
-  background:var(--current);
-  border-color:var(--current);
+  background:
+    var(--navy);
+
+  border-color:
+    var(--navy);
+
   color:#fff;
 }
 
 .legend{
   display:flex;
+
   gap:14px;
+
   flex-wrap:wrap;
+
   margin-top:11px;
+
   font-size:12px;
-  color:var(--muted);
+
+  color:
+    var(--muted);
 }
 
 .legend-item{
   display:flex;
+
   align-items:center;
+
   gap:6px;
 }
 
 .dot{
   width:12px;
+
   height:12px;
+
   border-radius:3px;
-  border:1px solid var(--line);
+
+  border:
+    1px solid
+    var(--line);
+
   background:#fff;
 }
 
 .dot.done{
-  background:var(--answered);
-  border-color:#9bc2a9;
+  background:
+    var(--answered);
+
+  border-color:
+    #9bc2a9;
 }
 
 .dot.now{
-  background:var(--navy);
-  border-color:var(--navy);
+  background:
+    var(--navy);
+
+  border-color:
+    var(--navy);
 }
 
 
 .qmeta{
   font-size:13px;
+
   font-weight:700;
+
   letter-spacing:.08em;
-  text-transform:uppercase;
-  color:var(--muted);
+
+  text-transform:
+    uppercase;
+
+  color:
+    var(--muted);
 }
 
 .q{
-  font:24px/1.45 Georgia,serif;
-  color:var(--navy);
-  margin:8px 0 18px;
+  font:
+    24px/1.45
+    Georgia,
+    serif;
+
+  color:
+    var(--navy);
+
+  margin:
+    8px 0 18px;
 }
 
 .opts{
   display:grid;
+
   gap:10px;
 }
 
 .opt{
   display:flex;
+
   gap:12px;
+
   width:100%;
+
   text-align:left;
+
   background:#fff;
-  border:1px solid var(--line);
-  padding:14px 15px;
+
+  border:
+    1px solid
+    var(--line);
+
+  padding:
+    14px 15px;
+
   border-radius:11px;
+
   cursor:pointer;
+
   font-size:16px;
-  color:var(--ink);
+
+  color:
+    var(--ink);
 }
 
 .opt:hover{
-  border-color:#9fb4c6;
-  background:#fafcfd;
+  border-color:
+    #9fb4c6;
+
+  background:
+    #fafcfd;
 }
 
 .opt.sel{
-  border-color:var(--navy);
-  background:#edf3f8;
+  border-color:
+    var(--navy);
+
+  background:
+    #edf3f8;
 }
 
 .letter{
   font-weight:700;
-  color:var(--navy);
+
+  color:
+    var(--navy);
+
   min-width:22px;
 }
 
 textarea{
   width:100%;
+
   min-height:260px;
+
   resize:vertical;
-  border:1px solid var(--line);
+
+  border:
+    1px solid
+    var(--line);
+
   border-radius:12px;
+
   padding:14px;
+
   outline:none;
 
   font:
-    16px/1.55 Arial,
+    16px/1.55
+    Arial,
     Helvetica,
     sans-serif;
 
-  color:var(--ink);
+  color:
+    var(--ink);
+
   background:#fff;
 }
 
 .wordcount{
   text-align:right;
+
   font-size:13px;
-  color:var(--muted);
+
+  color:
+    var(--muted);
+
   margin-top:7px;
 }
 
 .actions{
   display:flex;
-  justify-content:space-between;
+
+  justify-content:
+    space-between;
+
   gap:10px;
+
   flex-wrap:wrap;
+
   margin-top:22px;
 }
 
 .actions-right{
   display:flex;
+
   gap:10px;
 }
 
+
 .overlay{
   position:fixed;
+
   inset:0;
-  background:rgba(10,24,38,.72);
+
+  background:
+    rgba(
+      10,
+      24,
+      38,
+      .78
+    );
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
+
   padding:20px;
-  z-index:20;
+
+  z-index:80;
 }
 
 .warn{
   max-width:540px;
+
   background:#fff;
+
   border-radius:18px;
+
   padding:28px;
+
   text-align:center;
 }
 
@@ -453,43 +691,222 @@ textarea{
 
 .checkmark{
   width:72px;
+
   height:72px;
+
   display:flex;
+
   align-items:center;
+
   justify-content:center;
-  margin:10px auto 20px;
+
+  margin:
+    10px auto 20px;
+
   border-radius:50%;
-  background:#eaf4ee;
-  color:var(--ok);
+
+  background:
+    #eaf4ee;
+
+  color:
+    var(--ok);
+
   font-size:38px;
+
   font-weight:bold;
 }
 
 .badge{
   display:inline-block;
-  background:#eef3f8;
-  color:var(--navy);
+
+  background:
+    #eef3f8;
+
+  color:
+    var(--navy);
+
   border-radius:999px;
-  padding:7px 10px;
+
+  padding:
+    7px 10px;
+
   font-size:13px;
+
   font-weight:700;
+
   margin-top:8px;
 }
 
 .error{
-  color:var(--bad);
+  color:
+    var(--bad);
+
   font-weight:700;
+
   line-height:1.5;
 }
 
 .success{
-  color:var(--ok);
+  color:
+    var(--ok);
+
   font-weight:700;
 }
 
 .loading{
   opacity:.65;
+
   pointer-events:none;
+}
+
+
+/* =========================================
+   WATERMARK IDENTITAS
+========================================= */
+
+.watermark-layer{
+  position:fixed;
+
+  inset:
+    -12vh -12vw;
+
+  z-index:20;
+
+  pointer-events:none;
+
+  overflow:hidden;
+
+  display:grid;
+
+  grid-template-columns:
+    repeat(
+      4,
+      1fr
+    );
+
+  grid-auto-rows:150px;
+
+  transform:
+    rotate(-20deg)
+    scale(1.08);
+
+  transform-origin:center;
+}
+
+.watermark-item{
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:16px;
+
+  font:
+    700 13px/1.35
+    Arial,
+    Helvetica,
+    sans-serif;
+
+  letter-spacing:.04em;
+
+  color:
+    rgba(
+      21,
+      52,
+      82,
+      .11
+    );
+
+  white-space:
+    pre-line;
+}
+
+
+/* =========================================
+   BLUR / PRIVACY SHIELD
+========================================= */
+
+body.privacy #qtext,
+body.privacy #mcqArea,
+body.privacy #essayArea{
+  filter:
+    blur(22px);
+
+  opacity:.05;
+}
+
+.privacy-shield{
+  position:fixed;
+
+  inset:0;
+
+  z-index:60;
+
+  background:
+    #10283e;
+
+  color:#fff;
+
+  display:flex;
+
+  align-items:center;
+
+  justify-content:center;
+
+  text-align:center;
+
+  padding:28px;
+}
+
+.privacy-shield .inner{
+  max-width:560px;
+}
+
+.privacy-shield h2{
+  color:#fff;
+
+  margin-bottom:8px;
+}
+
+.privacy-shield p{
+  color:
+    #dbe5ee;
+
+  line-height:1.55;
+}
+
+
+/* =========================================
+   PRINT DIBLOK
+========================================= */
+
+@media print{
+
+  body *{
+    display:none !important;
+  }
+
+  body::before{
+
+    content:
+      "Pencetakan soal dinonaktifkan.";
+
+    display:block !important;
+
+    padding:40px;
+
+    font:
+      700 24px
+      Arial,
+      sans-serif;
+
+    color:#000;
+
+  }
+
 }
 
 
@@ -497,7 +914,8 @@ textarea{
 
   .grid,
   .form{
-    grid-template-columns:1fr;
+    grid-template-columns:
+      1fr;
   }
 
   .card{
@@ -509,7 +927,11 @@ textarea{
   }
 
   .question-nav{
-    grid-template-columns:repeat(5,1fr);
+    grid-template-columns:
+      repeat(
+        5,
+        1fr
+      );
   }
 
   .actions{
@@ -524,6 +946,14 @@ textarea{
     flex:1;
   }
 
+  .watermark-layer{
+    grid-template-columns:
+      repeat(
+        2,
+        1fr
+      );
+  }
+
 }
 
 </style>
@@ -533,31 +963,43 @@ textarea{
 
 <body>
 
+
 <div class="wrap">
 
 
-<!-- ===================================================
+<!-- =========================================
      START
-=================================================== -->
+========================================= -->
 
 <section
   class="card"
   id="start"
 >
 
+
 <div class="eyebrow">
+
 EVALUASI TENGAH SEMESTER • PARALEL D
+
 </div>
 
+
 <h1>
+
 Alat Industri Kimia
+
 </h1>
 
+
 <p class="sub">
+
 Solid Handling &amp; Evaporator
+
 </p>
 
+
 <div class="rule"></div>
+
 
 
 <div class="grid">
@@ -596,13 +1038,14 @@ Jawaban dapat dibuka dan diperbaiki kembali.
 </b>
 
 <span>
-Urutan soal dan pilihan jawaban diacak.
+Urutan soal dan pilihan jawaban diacak per attempt.
 </span>
 
 </div>
 
 
 </div>
+
 
 
 <div class="form">
@@ -639,6 +1082,7 @@ NPM
 </div>
 
 
+
 <label class="check">
 
 <input
@@ -649,7 +1093,9 @@ NPM
 <span>
 
 Saya memahami bahwa waktu ujian adalah 45 menit,
+urutan soal diacak,
 jawaban dapat ditinjau kembali melalui navigasi soal,
+identitas saya ditampilkan sebagai watermark pada halaman ujian,
 perpindahan tab akan tercatat,
 dan ujian akan disubmit otomatis setelah
 3 kali perpindahan tab.
@@ -657,6 +1103,7 @@ dan ujian akan disubmit otomatis setelah
 </span>
 
 </label>
+
 
 
 <button
@@ -680,9 +1127,9 @@ Mulai ETS
 
 
 
-<!-- ===================================================
+<!-- =========================================
      EXAM
-=================================================== -->
+========================================= -->
 
 <section
   class="card hidden"
@@ -695,8 +1142,11 @@ Mulai ETS
 
 <div>
 
+
 <div class="eyebrow">
+
 ETS • PARALEL D
+
 </div>
 
 
@@ -705,7 +1155,9 @@ ETS • PARALEL D
   class="status"
 ></div>
 
+
 </div>
+
 
 
 <div style="text-align:right">
@@ -715,7 +1167,9 @@ ETS • PARALEL D
   id="timer"
   class="timer"
 >
+
 45:00
+
 </div>
 
 
@@ -734,18 +1188,18 @@ Perpindahan tab:
 
 </div>
 
+
 </div>
+
 
 
 <div class="progress">
+
 <div id="bar"></div>
+
 </div>
 
 
-
-<!-- ===================================================
-     NAVIGASI NOMOR SOAL
-=================================================== -->
 
 <div class="navigator-wrap">
 
@@ -754,7 +1208,9 @@ Perpindahan tab:
 
 
 <div class="navigator-title">
+
 Navigasi Soal
+
 </div>
 
 
@@ -762,17 +1218,21 @@ Navigasi Soal
   id="answerStatus"
   class="answer-status"
 >
+
 Terjawab 0 dari 20
+
 </div>
 
 
 </div>
+
 
 
 <div
   id="questionNav"
   class="question-nav"
 ></div>
+
 
 
 <div class="legend">
@@ -807,6 +1267,7 @@ Belum dijawab
 
 </div>
 
+
 </div>
 
 
@@ -824,8 +1285,6 @@ Belum dijawab
 
 
 
-<!-- PILIHAN GANDA -->
-
 <div id="mcqArea">
 
 <div
@@ -837,12 +1296,11 @@ Belum dijawab
 
 
 
-<!-- URAIAN -->
-
 <div
   id="essayArea"
   class="hidden"
 >
+
 
 <textarea
   id="essayInput"
@@ -860,7 +1318,9 @@ kata
 
 </div>
 
+
 </div>
+
 
 
 <p
@@ -877,8 +1337,11 @@ kata
   id="prevBtn"
   class="btn"
 >
+
 ← Sebelumnya
+
 </button>
+
 
 
 <div class="actions-right">
@@ -888,7 +1351,9 @@ kata
   id="nextBtn"
   class="btn primary"
 >
+
 Berikutnya →
+
 </button>
 
 
@@ -896,11 +1361,14 @@ Berikutnya →
   id="submitBtn"
   class="btn submit"
 >
+
 Submit Ujian
+
 </button>
 
 
 </div>
+
 
 </div>
 
@@ -909,9 +1377,9 @@ Submit Ujian
 
 
 
-<!-- ===================================================
+<!-- =========================================
      RESULT
-=================================================== -->
+========================================= -->
 
 <section
   class="card hidden result"
@@ -920,22 +1388,30 @@ Submit Ujian
 
 
 <div class="checkmark">
+
 ✓
+
 </div>
 
 
 <div class="eyebrow">
+
 SUBMISSION RECEIVED
+
 </div>
 
 
 <h2>
+
 Jawaban Berhasil Dikirim
+
 </h2>
 
 
 <p class="success">
+
 Jawaban Anda telah tersimpan.
+
 </p>
 
 
@@ -946,7 +1422,9 @@ Jawaban Anda telah tersimpan.
 
 
 <p class="small">
+
 Pastikan halaman ini sudah muncul sebelum menutup browser.
+
 </p>
 
 
@@ -957,9 +1435,49 @@ Pastikan halaman ini sudah muncul sebelum menutup browser.
 
 
 
-<!-- ===================================================
-     TAB WARNING
-=================================================== -->
+<!-- WATERMARK -->
+
+<div
+  id="watermarkLayer"
+  class="watermark-layer hidden"
+></div>
+
+
+
+<!-- PRIVACY SHIELD -->
+
+<div
+  id="privacyShield"
+  class="privacy-shield hidden"
+>
+
+
+<div class="inner">
+
+
+<h2>
+
+Konten Ujian Disembunyikan
+
+</h2>
+
+
+<p>
+
+Halaman kehilangan fokus.
+Kembali ke jendela ujian untuk melanjutkan.
+
+</p>
+
+
+</div>
+
+
+</div>
+
+
+
+<!-- TAB WARNING -->
 
 <div
   id="overlay"
@@ -971,7 +1489,9 @@ Pastikan halaman ini sudah muncul sebelum menutup browser.
 
 
 <h2>
+
 Perpindahan Tab Terdeteksi
+
 </h2>
 
 
@@ -982,11 +1502,14 @@ Perpindahan Tab Terdeteksi
   id="backBtn"
   class="btn primary"
 >
+
 Kembali ke Ujian
+
 </button>
 
 
 </div>
+
 
 </div>
 
@@ -995,9 +1518,9 @@ Kembali ke Ujian
 <script>
 
 
-/* ===================================================
+/* =========================================
    SUPABASE CONFIG
-=================================================== */
+========================================= */
 
 const SUPABASE_URL =
   "https://ofnfcojkwlojvjiuaivh.supabase.co";
@@ -1008,15 +1531,17 @@ const SUPABASE_PUBLISHABLE_KEY =
 
 
 
-/* ===================================================
-   CONFIG UJIAN
-=================================================== */
+/* =========================================
+   CONFIG
+========================================= */
 
 const CFG = {
 
   minutes:45,
 
-  maxViol:3
+  maxViol:3,
+
+  watermarkCount:20
 
 };
 
@@ -1028,6 +1553,10 @@ const $ =
 
 
 let attemptId = null;
+
+let studentName = "";
+
+let studentNpm = "";
 
 let items = [];
 
@@ -1050,16 +1579,112 @@ let submitted = false;
 
 let pendingWarning = false;
 
+let screenshotShieldTimer = null;
 
 
-/* ===================================================
-   SHUFFLE
-=================================================== */
 
-function shuffle(array){
+/* =========================================
+   SEEDED RANDOM
+========================================= */
+
+function hash32(
+  str
+){
+
+  let h =
+    2166136261 >>> 0;
+
+
+  for(
+    let i = 0;
+
+    i < str.length;
+
+    i++
+  ){
+
+    h ^=
+      str.charCodeAt(i);
+
+
+    h =
+      Math.imul(
+        h,
+        16777619
+      );
+
+  }
+
+
+  return h >>> 0;
+
+}
+
+
+
+function mulberry32(
+  seed
+){
+
+  return function(){
+
+    let t =
+      seed +=
+      0x6D2B79F5;
+
+
+    t =
+      Math.imul(
+        t ^ (t >>> 15),
+        t | 1
+      );
+
+
+    t ^=
+      t
+      +
+      Math.imul(
+        t ^ (t >>> 7),
+        t | 61
+      );
+
+
+    return (
+
+      (
+        t ^
+        (t >>> 14)
+      )
+
+      >>> 0
+
+    )
+
+    /
+
+    4294967296;
+
+  };
+
+}
+
+
+
+function seededShuffle(
+  array,
+  seedText
+){
 
   const a =
     [...array];
+
+
+  const rnd =
+    mulberry32(
+      hash32(
+        seedText
+      )
+    );
 
 
   for(
@@ -1073,7 +1698,7 @@ function shuffle(array){
 
     const j =
       Math.floor(
-        Math.random() *
+        rnd() *
         (i + 1)
       );
 
@@ -1081,7 +1706,10 @@ function shuffle(array){
     [
       a[i],
       a[j]
-    ] =
+    ]
+
+    =
+
     [
       a[j],
       a[i]
@@ -1096,9 +1724,9 @@ function shuffle(array){
 
 
 
-/* ===================================================
+/* =========================================
    CONFIG CHECK
-=================================================== */
+========================================= */
 
 function readyConfig(){
 
@@ -1120,9 +1748,9 @@ function readyConfig(){
 
 
 
-/* ===================================================
+/* =========================================
    SUPABASE RPC
-=================================================== */
+========================================= */
 
 async function rpc(
   functionName,
@@ -1136,7 +1764,8 @@ async function rpc(
 
       {
 
-        method:"POST",
+        method:
+          "POST",
 
         headers:{
 
@@ -1152,14 +1781,17 @@ async function rpc(
         },
 
         body:
-          JSON.stringify(body)
+          JSON.stringify(
+            body
+          )
 
       }
 
     );
 
 
-  let data = null;
+  let data =
+    null;
 
 
   try{
@@ -1169,9 +1801,12 @@ async function rpc(
 
   }
 
-  catch(error){
+  catch(
+    error
+  ){
 
-    data = null;
+    data =
+      null;
 
   }
 
@@ -1183,9 +1818,13 @@ async function rpc(
     throw new Error(
 
       data?.message
+
       ||
+
       data?.error
+
       ||
+
       `HTTP ${response.status}`
 
     );
@@ -1199,9 +1838,9 @@ async function rpc(
 
 
 
-/* ===================================================
-   VALIDASI FORM
-=================================================== */
+/* =========================================
+   START FORM
+========================================= */
 
 function validateStart(){
 
@@ -1235,6 +1874,7 @@ function validateStart(){
 }
 
 
+
 $("name")
   .addEventListener(
     "input",
@@ -1257,9 +1897,257 @@ $("agree")
 
 
 
-/* ===================================================
+/* =========================================
+   WATERMARK
+========================================= */
+
+function buildWatermark(){
+
+  const layer =
+    $("watermarkLayer");
+
+
+  layer.innerHTML =
+    "";
+
+
+  for(
+    let i = 0;
+
+    i <
+    CFG.watermarkCount;
+
+    i++
+  ){
+
+    const item =
+      document
+        .createElement(
+          "div"
+        );
+
+
+    item.className =
+      "watermark-item";
+
+
+    layer
+      .appendChild(
+        item
+      );
+
+  }
+
+
+  updateWatermark();
+
+
+  layer
+    .classList
+    .remove(
+      "hidden"
+    );
+
+}
+
+
+
+function updateWatermark(){
+
+  if(
+    !attemptId
+  ){
+
+    return;
+
+  }
+
+
+  const now =
+    new Date();
+
+
+  const clock =
+    now
+      .toLocaleString(
+
+        "id-ID",
+
+        {
+
+          hour12:false
+
+        }
+
+      );
+
+
+  const shortId =
+    String(
+      attemptId
+    )
+    .slice(
+      0,
+      8
+    );
+
+
+  const text =
+
+    `${studentName}\n${studentNpm} • ${shortId}\n${clock}`;
+
+
+  document
+    .querySelectorAll(
+      ".watermark-item"
+    )
+
+    .forEach(
+
+      el =>{
+
+        el.textContent =
+          text;
+
+      }
+
+    );
+
+}
+
+
+
+function hideWatermark(){
+
+  $("watermarkLayer")
+    .classList
+    .add(
+      "hidden"
+    );
+
+}
+
+
+
+/* =========================================
+   PRIVACY SHIELD
+========================================= */
+
+function showPrivacyShield(){
+
+  if(
+    !started
+    ||
+    submitted
+  ){
+
+    return;
+
+  }
+
+
+  document
+    .body
+    .classList
+    .add(
+      "privacy"
+    );
+
+
+  $("privacyShield")
+    .classList
+    .remove(
+      "hidden"
+    );
+
+}
+
+
+
+function hidePrivacyShield(){
+
+  document
+    .body
+    .classList
+    .remove(
+      "privacy"
+    );
+
+
+  $("privacyShield")
+    .classList
+    .add(
+      "hidden"
+    );
+
+}
+
+
+
+function temporaryScreenshotShield(){
+
+  if(
+    !started
+    ||
+    submitted
+  ){
+
+    return;
+
+  }
+
+
+  showPrivacyShield();
+
+
+  clearTimeout(
+    screenshotShieldTimer
+  );
+
+
+  screenshotShieldTimer =
+    setTimeout(
+
+      ()=>{
+
+        if(
+
+          started
+
+          &&
+
+          !submitted
+
+          &&
+
+          document
+            .visibilityState ===
+            "visible"
+
+          &&
+
+          document
+            .hasFocus()
+
+        ){
+
+          hidePrivacyShield();
+
+        }
+
+      },
+
+      1600
+
+    );
+
+}
+
+
+
+/* =========================================
    START EXAM
-=================================================== */
+========================================= */
 
 $("startBtn").onclick =
 async ()=>{
@@ -1281,13 +2169,13 @@ async ()=>{
   }
 
 
-  const studentName =
+  studentName =
     $("name")
       .value
       .trim();
 
 
-  const studentNpm =
+  studentNpm =
     $("npm")
       .value
       .trim();
@@ -1335,6 +2223,7 @@ async ()=>{
 
 
     const mcqs =
+
       (
         data.questions
         ||
@@ -1345,29 +2234,55 @@ async ()=>{
 
         question =>({
 
-          type:"mcq",
+          type:
+            "mcq",
 
-          id:question.id,
+          id:
+            question.id,
 
-          topic:question.topic,
+          topic:
+            question.topic,
 
           question:
             question.question,
 
           options:
-            shuffle(
+            seededShuffle(
+
               question.options
               ||
-              []
+              [],
+
+              `${attemptId}:${question.id}:options`
+
             )
 
         })
+
+      )
+
+      .sort(
+
+        (
+          a,
+          b
+        ) =>
+
+          String(
+            a.id
+          )
+          .localeCompare(
+            String(
+              b.id
+            )
+          )
 
       );
 
 
 
     const essays =
+
       (
         data.essays
         ||
@@ -1378,46 +2293,74 @@ async ()=>{
 
         essay =>({
 
-          type:"essay",
+          type:
+            "essay",
 
-          id:essay.id,
+          id:
+            essay.id,
 
-          topic:essay.topic,
+          topic:
+            essay.topic,
 
           question:
             essay.question
 
         })
 
+      )
+
+      .sort(
+
+        (
+          a,
+          b
+        ) =>
+
+          String(
+            a.id
+          )
+          .localeCompare(
+            String(
+              b.id
+            )
+          )
+
       );
 
 
+
     if(
+
       mcqs.length !== 16
+
       ||
+
       essays.length !== 4
+
     ){
 
       throw new Error(
+
         "Jumlah soal dari database tidak sesuai."
+
       );
 
     }
 
 
 
-    /*
-    SEMUA 16 PG + 4 URAIAN
-    DIACAK MENJADI 20 SOAL
-    */
-
     items =
-      shuffle(
+      seededShuffle(
+
         [
           ...mcqs,
           ...essays
-        ]
+        ],
+
+        `${attemptId}:display-order`
+
       );
+
 
 
     idx = 0;
@@ -1436,6 +2379,7 @@ async ()=>{
     submitted = false;
 
     pendingWarning = false;
+
 
 
     document
@@ -1468,20 +2412,21 @@ async ()=>{
 
 
     $("student").textContent =
-      studentName
-      +
-      " • "
-      +
-      studentNpm;
+
+      `${studentName} • ${studentNpm}`;
 
 
     $("viol").textContent =
       violations;
 
 
+
+    buildWatermark();
+
     renderQuestion();
 
     updateClock();
+
 
 
     timerInterval =
@@ -1499,7 +2444,9 @@ async ()=>{
           ){
 
             finishExam(
+
               "Waktu habis — submit otomatis"
+
             );
 
           }
@@ -1511,6 +2458,7 @@ async ()=>{
       );
 
 
+
     try{
 
       await document
@@ -1519,14 +2467,18 @@ async ()=>{
 
     }
 
-    catch(error){
+    catch(
+      error
+    ){
 
     }
 
 
   }
 
-  catch(error){
+  catch(
+    error
+  ){
 
 
     $("start")
@@ -1537,8 +2489,11 @@ async ()=>{
 
 
     $("startError").textContent =
+
       "Gagal memulai ujian: "
+
       +
+
       error.message;
 
 
@@ -1555,9 +2510,9 @@ async ()=>{
 
 
 
-/* ===================================================
+/* =========================================
    TIMER
-=================================================== */
+========================================= */
 
 function updateClock(){
 
@@ -1580,11 +2535,13 @@ function updateClock(){
 
   $("timer").textContent =
 
-    String(minutes)
-      .padStart(
-        2,
-        "0"
-      )
+    String(
+      minutes
+    )
+    .padStart(
+      2,
+      "0"
+    )
 
     +
 
@@ -1592,11 +2549,13 @@ function updateClock(){
 
     +
 
-    String(seconds)
-      .padStart(
-        2,
-        "0"
-      );
+    String(
+      seconds
+    )
+    .padStart(
+      2,
+      "0"
+    );
 
 
   if(
@@ -1608,15 +2567,20 @@ function updateClock(){
 
   }
 
+
+  updateWatermark();
+
 }
 
 
 
-/* ===================================================
-   STATUS JAWABAN
-=================================================== */
+/* =========================================
+   ANSWER STATE
+========================================= */
 
-function isAnswered(item){
+function isAnswered(
+  item
+){
 
   if(
     item.type ===
@@ -1631,14 +2595,18 @@ function isAnswered(item){
 
 
   return !!(
+
     essayAnswers[
       item.id
     ]
+
     &&
+
     essayAnswers[
       item.id
     ]
-      .trim()
+    .trim()
+
   );
 
 }
@@ -1647,23 +2615,26 @@ function isAnswered(item){
 
 function answeredCount(){
 
-  return items.filter(
-    item =>
-      isAnswered(item)
-  ).length;
+  return items
+    .filter(
+      isAnswered
+    )
+    .length;
 
 }
 
 
 
-/* ===================================================
-   SIMPAN JAWABAN AKTIF
-=================================================== */
+/* =========================================
+   SAVE CURRENT ANSWER
+========================================= */
 
 function saveCurrentAnswer(){
 
   const item =
-    items[idx];
+    items[
+      idx
+    ];
 
 
   if(
@@ -1692,9 +2663,9 @@ function saveCurrentAnswer(){
 
 
 
-/* ===================================================
+/* =========================================
    NAVIGATOR
-=================================================== */
+========================================= */
 
 function renderNavigator(){
 
@@ -1702,99 +2673,106 @@ function renderNavigator(){
     "";
 
 
-  items.forEach(
+  items
+    .forEach(
 
-    (
-      item,
-      index
-    )=>{
-
-
-      const button =
-        document
-          .createElement(
-            "button"
-          );
+      (
+        item,
+        index
+      )=>{
 
 
-      button.type =
-        "button";
+        const button =
+          document
+            .createElement(
+              "button"
+            );
 
 
-      button.className =
-        "qnav";
+        button.type =
+          "button";
 
 
-      button.textContent =
-        index + 1;
+        button.className =
+          "qnav";
 
 
-      if(
-        isAnswered(item)
-      ){
-
-        button
-          .classList
-          .add(
-            "answered"
-          );
-
-      }
+        button.textContent =
+          index + 1;
 
 
-      if(
-        index === idx
-      ){
+        if(
+          isAnswered(
+            item
+          )
+        ){
 
-        button
-          .classList
-          .remove(
-            "answered"
-          );
-
-
-        button
-          .classList
-          .add(
-            "current"
-          );
-
-      }
-
-
-      button.onclick =
-      ()=>{
-
-        saveCurrentAnswer();
-
-        idx =
-          index;
-
-        renderQuestion();
-
-      };
-
-
-      $("questionNav")
-        .appendChild(
           button
-        );
+            .classList
+            .add(
+              "answered"
+            );
 
-    }
+        }
 
-  );
+
+        if(
+          index === idx
+        ){
+
+          button
+            .classList
+            .remove(
+              "answered"
+            );
+
+
+          button
+            .classList
+            .add(
+              "current"
+            );
+
+        }
+
+
+        button.onclick =
+        ()=>{
+
+
+          saveCurrentAnswer();
+
+
+          idx =
+            index;
+
+
+          renderQuestion();
+
+        };
+
+
+        $("questionNav")
+          .appendChild(
+            button
+          );
+
+      }
+
+    );
 
 
   $("answerStatus").textContent =
+
     `Terjawab ${answeredCount()} dari ${items.length}`;
 
 }
 
 
 
-/* ===================================================
+/* =========================================
    RENDER QUESTION
-=================================================== */
+========================================= */
 
 function renderQuestion(){
 
@@ -1803,7 +2781,9 @@ function renderQuestion(){
 
 
   const item =
-    items[idx];
+    items[
+      idx
+    ];
 
 
   if(
@@ -1818,7 +2798,9 @@ function renderQuestion(){
   }
 
 
+
   $("qmeta").textContent =
+
     `Soal ${idx + 1} dari ${items.length} • ${item.topic}`;
 
 
@@ -1827,6 +2809,7 @@ function renderQuestion(){
 
 
   $("bar").style.width =
+
     (
       answeredCount()
       /
@@ -1834,8 +2817,11 @@ function renderQuestion(){
       *
       100
     )
+
     +
+
     "%";
+
 
 
   if(
@@ -1860,6 +2846,7 @@ function renderQuestion(){
 
     $("opts").innerHTML =
       "";
+
 
 
     item.options
@@ -1903,6 +2890,7 @@ function renderQuestion(){
           }
 
 
+
           const letter =
             document
               .createElement(
@@ -1915,11 +2903,17 @@ function renderQuestion(){
 
 
           letter.textContent =
-            String.fromCharCode(
-              65 + optionIndex
-            )
+
+            String
+              .fromCharCode(
+                65 +
+                optionIndex
+              )
+
             +
+
             ".";
+
 
 
           const text =
@@ -1931,6 +2925,7 @@ function renderQuestion(){
 
           text.textContent =
             option;
+
 
 
           button
@@ -1945,6 +2940,7 @@ function renderQuestion(){
             );
 
 
+
           button.onclick =
           ()=>{
 
@@ -1955,13 +2951,16 @@ function renderQuestion(){
               option;
 
 
+
             [
-              ...$("opts").children
+              ...$("opts")
+                .children
             ]
 
             .forEach(
 
               element =>
+
                 element
                   .classList
                   .remove(
@@ -1978,10 +2977,13 @@ function renderQuestion(){
               );
 
 
+
             renderNavigator();
 
 
+
             $("bar").style.width =
+
               (
                 answeredCount()
                 /
@@ -1989,10 +2991,13 @@ function renderQuestion(){
                 *
                 100
               )
+
               +
+
               "%";
 
           };
+
 
 
           $("opts")
@@ -2024,10 +3029,13 @@ function renderQuestion(){
 
 
     $("essayInput").value =
+
       essayAnswers[
         item.id
       ]
+
       ||
+
       "";
 
 
@@ -2036,11 +3044,13 @@ function renderQuestion(){
   }
 
 
+
   $("prevBtn").disabled =
     idx === 0;
 
 
   $("nextBtn").disabled =
+
     idx ===
     items.length - 1;
 
@@ -2051,9 +3061,9 @@ function renderQuestion(){
 
 
 
-/* ===================================================
+/* =========================================
    WORD COUNT
-=================================================== */
+========================================= */
 
 function updateWordCount(){
 
@@ -2064,14 +3074,19 @@ function updateWordCount(){
 
 
   const count =
+
     text
+
     ?
+
     text
       .split(
         /\s+/
       )
       .length
+
     :
+
     0;
 
 
@@ -2091,7 +3106,9 @@ $("essayInput")
 
 
       const item =
-        items[idx];
+        items[
+          idx
+        ];
 
 
       if(
@@ -2117,6 +3134,7 @@ $("essayInput")
 
 
       $("bar").style.width =
+
         (
           answeredCount()
           /
@@ -2124,7 +3142,9 @@ $("essayInput")
           *
           100
         )
+
         +
+
         "%";
 
     }
@@ -2133,12 +3153,13 @@ $("essayInput")
 
 
 
-/* ===================================================
+/* =========================================
    PREVIOUS / NEXT
-=================================================== */
+========================================= */
 
 $("prevBtn").onclick =
 ()=>{
+
 
   saveCurrentAnswer();
 
@@ -2160,6 +3181,7 @@ $("prevBtn").onclick =
 $("nextBtn").onclick =
 ()=>{
 
+
   saveCurrentAnswer();
 
 
@@ -2178,9 +3200,9 @@ $("nextBtn").onclick =
 
 
 
-/* ===================================================
+/* =========================================
    MANUAL SUBMIT
-=================================================== */
+========================================= */
 
 $("submitBtn").onclick =
 async ()=>{
@@ -2189,14 +3211,21 @@ async ()=>{
   saveCurrentAnswer();
 
 
+
   const unanswered =
+
     items.length
+
     -
+
     answeredCount();
 
 
+
   let message =
+
     "Apakah Anda yakin ingin mengirim seluruh jawaban?";
+
 
 
   if(
@@ -2204,15 +3233,19 @@ async ()=>{
   ){
 
     message =
+
       `Masih ada ${unanswered} soal yang belum dijawab.\n\nTetap submit ujian?`;
 
   }
 
 
+
   const confirmSubmit =
-    window.confirm(
-      message
-    );
+
+    window
+      .confirm(
+        message
+      );
 
 
   if(
@@ -2224,17 +3257,20 @@ async ()=>{
   }
 
 
+
   await finishExam(
+
     "Disubmit oleh mahasiswa"
+
   );
 
 };
 
 
 
-/* ===================================================
-   SUBMIT EXAM
-=================================================== */
+/* =========================================
+   SUBMIT
+========================================= */
 
 async function finishExam(
   reason
@@ -2253,9 +3289,12 @@ async function finishExam(
   saveCurrentAnswer();
 
 
-  submitted = true;
+  submitted =
+    true;
 
-  started = false;
+
+  started =
+    false;
 
 
   clearInterval(
@@ -2263,68 +3302,80 @@ async function finishExam(
   );
 
 
+
   const pgPayload =
-    Object.entries(
-      pgAnswers
-    )
 
-    .map(
+    Object
+      .entries(
+        pgAnswers
+      )
 
-      (
-        [
-          questionId,
-          answer
-        ]
-      ) =>({
+      .map(
 
-        question_id:
-          questionId,
+        (
+          [
+            questionId,
+            answer
+          ]
+        ) =>({
 
-        answer:
-          answer
+          question_id:
+            questionId,
 
-      })
+          answer:
+            answer
 
-    );
+        })
+
+      );
+
 
 
   const essayPayload =
-    Object.entries(
-      essayAnswers
-    )
 
-    .filter(
+    Object
+      .entries(
+        essayAnswers
+      )
 
-      (
-        [
-          essayId,
+      .filter(
+
+        (
+          [
+            essayId,
+            answerText
+          ]
+        ) =>
+
           answerText
-        ]
-      ) =>
-        answerText
-        &&
-        answerText.trim()
 
-    )
+          &&
 
-    .map(
-
-      (
-        [
-          essayId,
           answerText
-        ]
-      ) =>({
+            .trim()
 
-        essay_id:
-          essayId,
+      )
 
-        answer_text:
-          answerText.trim()
+      .map(
 
-      })
+        (
+          [
+            essayId,
+            answerText
+          ]
+        ) =>({
 
-    );
+          essay_id:
+            essayId,
+
+          answer_text:
+            answerText
+              .trim()
+
+        })
+
+      );
+
 
 
   $("submitBtn").disabled =
@@ -2337,6 +3388,7 @@ async function finishExam(
 
   $("examError").textContent =
     "";
+
 
 
   try{
@@ -2369,12 +3421,20 @@ async function finishExam(
       );
 
 
+
     document
       .body
       .classList
       .remove(
         "exam"
       );
+
+
+    hidePrivacyShield();
+
+
+    hideWatermark();
+
 
 
     $("overlay")
@@ -2398,16 +3458,23 @@ async function finishExam(
       );
 
 
+
     $("submissionId").textContent =
+
       "Submission ID: "
+
       +
+
       data.attempt_id;
+
 
 
     try{
 
+
       if(
-        document.fullscreenElement
+        document
+          .fullscreenElement
       ){
 
         await document
@@ -2415,29 +3482,44 @@ async function finishExam(
 
       }
 
+
     }
 
-    catch(error){
+    catch(
+      error
+    ){
 
     }
 
 
   }
 
-  catch(error){
+  catch(
+    error
+  ){
 
 
-    submitted = false;
+    submitted =
+      false;
 
-    started = true;
+
+    started =
+      true;
+
 
 
     $("examError").textContent =
+
       "Submit gagal: "
+
       +
+
       error.message
+
       +
+
       ". Jangan tutup halaman. Silakan submit kembali.";
+
 
 
     $("submitBtn").disabled =
@@ -2447,15 +3529,18 @@ async function finishExam(
     $("submitBtn").textContent =
       "Submit Ujian";
 
+
+    buildWatermark();
+
   }
 
 }
 
 
 
-/* ===================================================
+/* =========================================
    TAB SWITCH
-=================================================== */
+========================================= */
 
 document
   .addEventListener(
@@ -2476,12 +3561,16 @@ document
       }
 
 
+
       if(
         document.hidden
       ){
 
 
         saveCurrentAnswer();
+
+
+        showPrivacyShield();
 
 
         violations++;
@@ -2491,6 +3580,7 @@ document
           violations;
 
 
+
         if(
           violations >=
           CFG.maxViol
@@ -2498,7 +3588,9 @@ document
 
 
           finishExam(
+
             "Batas perpindahan tab tercapai — submit otomatis"
+
           );
 
         }
@@ -2514,9 +3606,13 @@ document
       }
 
       else if(
+
         pendingWarning
+
         &&
+
         !submitted
+
       ){
 
 
@@ -2524,8 +3620,14 @@ document
           false;
 
 
+        hidePrivacyShield();
+
+
+
         $("warnText").textContent =
+
           `Perpindahan tab ke-${violations} tercatat. Pada perpindahan ke-${CFG.maxViol}, ujian akan disubmit otomatis.`;
+
 
 
         $("overlay")
@@ -2533,6 +3635,95 @@ document
           .remove(
             "hidden"
           );
+
+      }
+
+    }
+
+  );
+
+
+
+/* =========================================
+   WINDOW BLUR
+========================================= */
+
+window
+  .addEventListener(
+
+    "blur",
+
+    ()=>{
+
+
+      if(
+        started
+        &&
+        !submitted
+      ){
+
+        showPrivacyShield();
+
+      }
+
+    }
+
+  );
+
+
+
+window
+  .addEventListener(
+
+    "focus",
+
+    ()=>{
+
+
+      if(
+
+        started
+
+        &&
+
+        !submitted
+
+        &&
+
+        document
+          .visibilityState ===
+          "visible"
+
+        &&
+
+        $("overlay")
+          .classList
+          .contains(
+            "hidden"
+          )
+
+      ){
+
+
+        setTimeout(
+
+          ()=>{
+
+
+            if(
+              document
+                .hasFocus()
+            ){
+
+              hidePrivacyShield();
+
+            }
+
+          },
+
+          180
+
+        );
 
       }
 
@@ -2553,6 +3744,10 @@ $("backBtn").onclick =
     );
 
 
+  hidePrivacyShield();
+
+
+
   try{
 
     document
@@ -2561,7 +3756,9 @@ $("backBtn").onclick =
 
   }
 
-  catch(error){
+  catch(
+    error
+  ){
 
   }
 
@@ -2569,15 +3766,16 @@ $("backBtn").onclick =
 
 
 
-/* ===================================================
+/* =========================================
    BASIC ANTI COPY
-=================================================== */
+========================================= */
 
 [
   "contextmenu",
   "copy",
   "cut",
-  "paste"
+  "paste",
+  "dragstart"
 ]
 
 .forEach(
@@ -2613,6 +3811,94 @@ $("backBtn").onclick =
 
 
 
+/* =========================================
+   SCREENSHOT SHORTCUT DETERRENCE
+========================================= */
+
+function isScreenshotShortcut(
+  event
+){
+
+  const key =
+
+    String(
+      event.key
+      ||
+      ""
+    )
+    .toLowerCase();
+
+
+
+  if(
+    event.key ===
+    "PrintScreen"
+  ){
+
+    return true;
+
+  }
+
+
+
+  if(
+
+    event.metaKey
+
+    &&
+
+    event.shiftKey
+
+    &&
+
+    [
+      "3",
+      "4",
+      "5"
+    ]
+    .includes(
+      key
+    )
+
+  ){
+
+    return true;
+
+  }
+
+
+
+  if(
+
+    event.metaKey
+
+    &&
+
+    event.shiftKey
+
+    &&
+
+    key ===
+    "s"
+
+  ){
+
+    return true;
+
+  }
+
+
+
+  return false;
+
+}
+
+
+
+/* =========================================
+   KEYBOARD PROTECTION
+========================================= */
+
 document
   .addEventListener(
 
@@ -2632,9 +3918,35 @@ document
       }
 
 
+
       const key =
-        event.key
-          .toLowerCase();
+
+        String(
+          event.key
+          ||
+          ""
+        )
+        .toLowerCase();
+
+
+
+      if(
+        isScreenshotShortcut(
+          event
+        )
+      ){
+
+        event
+          .preventDefault();
+
+
+        temporaryScreenshotShield();
+
+
+        return;
+
+      }
+
 
 
       if(
@@ -2677,7 +3989,8 @@ document
 
       ){
 
-        event.preventDefault();
+        event
+          .preventDefault();
 
       }
 
@@ -2687,9 +4000,42 @@ document
 
 
 
-/* ===================================================
+document
+  .addEventListener(
+
+    "keyup",
+
+    event =>{
+
+
+      if(
+
+        started
+
+        &&
+
+        !submitted
+
+        &&
+
+        event.key ===
+        "PrintScreen"
+
+      ){
+
+        temporaryScreenshotShield();
+
+      }
+
+    }
+
+  );
+
+
+
+/* =========================================
    CLOSE / RELOAD WARNING
-=================================================== */
+========================================= */
 
 window
   .addEventListener(
@@ -2716,8 +4062,8 @@ window
 
   );
 
+
 </script>
 
 </body>
-
 </html>
